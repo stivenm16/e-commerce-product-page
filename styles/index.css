@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Manrope:wght@800&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: hsl(0, 0%, 100%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+header img {
+    margin-left: 6.5rem;
+    margin-right: 4rem;
+}
+
+hr {
+    width: 85%;
+    margin: auto;
+    background-color: hsl(223, 64%, 98%);
+    height: 2px;
+    border: none;
+}
+
+.left-header-container {
+    justify-content: space-between;
+    font-size: 14px;
+    color: hsl(219, 9%, 45%);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    gap: 1rem;
+    margin-right: auto;
+}
+
+.right-header-container {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    margin-right: 6rem;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.cart-container img {
+    height: 15px;
+    width: 15px;
+}
+
+.profile-container img {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    height: 36px;
+    width: 36px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+.left-section {
+    height: 100vh;
+}
+
+.large-image{
+    display: flex;
+    margin: 4rem;
+    margin-left: 8rem;
+}
+.large-image img {
+    height: 450px;
+    width: 450px;
+    border-radius: 25px;
+}
+
+.small-images {
+    display: flex;
+    flex-direction: row;
+}
