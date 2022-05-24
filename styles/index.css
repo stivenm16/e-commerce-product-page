@@ -128,13 +128,28 @@ main {
     margin: 0;
     padding: 0;
 }
+.card-small-image-selected{
+    transition: 0.15s ease-in-out;
+    border: 3px solid  hsl(26, 100%, 55%);
+    padding: 0;
+    border-radius: 16px;
+    height: 70px;
+    width: 73px;
+    object-fit: cover;
+    overflow: hidden;
 
+}
+.small-selected {
+    opacity: .2;
+}
 .card-small-image img:hover {
     
     border: 3px solid  hsl(26, 100%, 55%);
     opacity: .2;
     height: 67px;
     width: 70px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .right-container {
