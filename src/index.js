@@ -1,3 +1,5 @@
+import {setImage, changeImage}  from './setImage.js'
+
 const btnAdd = document.querySelector('.btn-add')
 const btnRmv = document.querySelector('.btn-rmv')
 let quantity = document.querySelector('.quantity')
@@ -18,3 +20,5 @@ function rmvItem() {
 }
 btnAdd.addEventListener('click', addItem)
 btnRmv.addEventListener('click', rmvItem)
+
+
