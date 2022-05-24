@@ -94,6 +94,7 @@ main {
     cursor: pointer;
     height: 360px;
     width: 370px;
+    max-width: 400px;
     border-radius: 25px;
 }
 
@@ -286,8 +287,6 @@ h3 {
     max-width: 80%;
 }
 
-
-
 #overlay{
     position: fixed;
     top: 0;
@@ -299,11 +298,14 @@ h3 {
 
 #modal-large-image {
     margin: 0;
+    margin-right: 50px;
     /* background-color: rgba(0,0,0,.5); */
+    margin-right: 2rem;
 }
 
 .small-images-modal {
     display: flex;
+    margin-left: 1.125rem;
 }
 
 #modal-small-1 {
@@ -321,4 +323,39 @@ h3 {
 #modal-small-4 {
     background-color:hsl(0, 0%, 100%);
     height: 67px;
+}
+
+.large-One-Modal {
+    margin-left: 1.8rem;
+    margin-bottom: 1rem;
+}
+.modal-btn {
+    position: absolute;
+    border-radius: 50%;
+    border-color: hsl(25, 100%, 94%);
+    background-color: hsl(0, 0%, 100%);
+    width: 32px;
+    height: 32px;
+    transition: .9s background;
+    
+}
+
+.modal-btn img {
+    position: absolute;
+    height: 12px;
+    width: 6px;
+    bottom: 8px;
+    right: 14px;
+}
+
+#prev {
+    position: absolute;
+    top: 35%;
+    right: 88%;
+}
+
+#next {
+    position: absolute;
+    top: 33%;
+    left: 92%;
 }
