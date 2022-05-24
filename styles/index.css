@@ -204,7 +204,7 @@ h1 {
     background-color: hsl(223, 64%, 98%);
     font-weight: 700;
 }
-.btn {
+.btn-rmv, .btn-add {
     display: flex;
     margin-bottom: .5rem;
     background-color: transparent;
