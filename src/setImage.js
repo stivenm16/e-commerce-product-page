@@ -1,4 +1,4 @@
-const largeImg = document.querySelector('.largeOne')
+export const largeImg = document.querySelector('.largeOne')
 const containerSmall = [...document.querySelectorAll('.card-small-image')]
 const smallSelected = [...document.querySelectorAll('.small')]
 const small1 = document.getElementById('1')
