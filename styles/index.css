@@ -105,9 +105,11 @@ main {
     margin: .85rem;
     margin-right: .55rem;
     padding: 0;
+    border-radius: 12px;
 }
 
 .card-small-image:hover {
+    transition: 0.15s ease-in-out;
     border: 3px solid  hsl(26, 100%, 55%);
     padding: 0;
     border-radius: 16px;
