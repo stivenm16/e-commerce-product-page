@@ -1,4 +1,4 @@
-import {setImage, changeImage}  from './setImage.js'
+import {setImage, changeId}  from './setImage.js'
 
 const btnAdd = document.querySelector('.btn-add')
 const btnRmv = document.querySelector('.btn-rmv')
