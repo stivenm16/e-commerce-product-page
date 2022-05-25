@@ -6,12 +6,12 @@ const closeBtn = document.getElementById('close-btn')
 export function openMainModal() {
     modal.classList.add('active')
     overlay.classList.add('active')
-    console.log('prueba')
+    closeBtn.classList.add('active')
 }
 export function closeMainModal() {
     modal.classList.remove('active')
     overlay.classList.remove('active')
-    console.log('prueba')
+    closeBtn.classList.remove('active')
 }
 
 largeImg.addEventListener('click', openMainModal)

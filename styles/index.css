@@ -290,7 +290,6 @@ h3 {
 
 }
 
-
 #overlay.active {
     opacity: 1;
     pointer-events: all;
@@ -342,11 +341,13 @@ h3 {
 .modal-btn {
     position: absolute;
     border-radius: 50%;
+    border-width: .5px;
     border-color: hsl(25, 100%, 94%);
     background-color: hsl(0, 0%, 100%);
     width: 32px;
     height: 32px;
     transition: .9s background;
+    cursor: pointer;
     
 }
 
@@ -369,8 +370,12 @@ h3 {
     top: 33%;
     left: 92%;
 }
+.modal-btn .nxt {
+    position: absolute;
+    right: .75rem;
+}
 
-#close-btn {
+#close-btn.active {
     position: fixed;
     top: 8%;
     left: 62%;
@@ -381,4 +386,7 @@ h3 {
     font-size: 18px;
     color: hsl(0, 0%, 100%);
     z-index: 10;
+}
+#close-btn.active:hover {
+    color: hsl(26, 100%, 55%);
 }
