@@ -1,5 +1,5 @@
 export const largeImg = document.querySelector('.largeOne')
-const containerSmall = [...document.querySelectorAll('.card-small-image')]
+export const containerSmall = [...document.querySelectorAll('.card-small-image')]
 const smallSelected = [...document.querySelectorAll('.small')]
 const small1 = document.getElementById('1')
 const small2 = document.getElementById('2')
@@ -41,4 +41,4 @@ small2.addEventListener('click', changeId)
 small3.addEventListener('click', changeId)
 small4.addEventListener('click', changeId)
 
-export {setImage, changeId}
+export {setImage, changeId, selectSmallOne, unSelectedSmall, idClicked}
