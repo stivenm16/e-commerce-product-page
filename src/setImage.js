@@ -41,7 +41,7 @@ small2.addEventListener('click', changeId)
 small3.addEventListener('click', changeId)
 small4.addEventListener('click', changeId)
 
-export {setImage, changeId, selectSmallOne, unSelectedSmall, idClicked}
+export {setImage, changeId, selectSmallOne, unSelectedSmall, idClicked, small1, small2, small3, small4, smallSelected}
 
 
 

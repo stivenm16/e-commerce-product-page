@@ -310,6 +310,7 @@ h3 {
     margin: 0;
     margin-right: 50px;
     margin-right: 2rem;
+    /* cursor: none; */
 }
 
 .small-images-modal {
@@ -347,7 +348,7 @@ h3 {
     width: 32px;
     height: 32px;
     transition: .9s background;
-    cursor: pointer;
+    /* cursor: pointer; */
     
 }
 
@@ -363,12 +364,14 @@ h3 {
     position: absolute;
     top: 35%;
     right: 88%;
+    cursor: pointer;
 }
 
 #next {
     position: absolute;
     top: 33%;
     left: 92%;
+    cursor: pointer;
 }
 .modal-btn .nxt {
     position: absolute;
