@@ -42,3 +42,11 @@ small3.addEventListener('click', changeId)
 small4.addEventListener('click', changeId)
 
 export {setImage, changeId, selectSmallOne, unSelectedSmall, idClicked}
+
+
+
+
+
+
+
+

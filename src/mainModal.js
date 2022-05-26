@@ -5,11 +5,12 @@ const closeBtn = document.getElementById('close-btn')
 const prevBtn = document.getElementById('prev')
 const nextBtn = document.getElementById('next')
 const containerSmallModal = containerSmall.slice(4)
-const largeImgModal = document.getElementById('large-One-Modal')
+const largeImgModal = document.getElementsByClassName('large-One-Modal')
+let nextId = idClicked
 
 
 function setImgModal() {
-    largeImgModal.src = `./images/image-product-${idClicked}.jpg`
+    largeImgModal[0].src = `./images/image-product-${idClicked}.jpg`
 }
 export function openMainModal() {
     modal.classList.add('active')
@@ -23,29 +24,19 @@ export function closeMainModal() {
     closeBtn.classList.remove('active')
 }
 
-console.log(idClicked)
-console.log(containerSmallModal)
-
 largeImg.addEventListener('click', openMainModal)
 closeBtn.addEventListener('click',closeMainModal)
+function changeImg(change) {
 
-function prueba() {
-    console.log(idClicked)
+    nextId += change 
+    
+    
+    if (nextId === 0|| nextId == containerSmallModal.length + 1){
+        nextId = nextId === 0 ? containerSmallModal.length : 1
+    }
+    largeImgModal[0].src = `./images/image-product-${nextId}.jpg`
+
 }
 
-nextBtn.addEventListener('click', prueba)
-
-// prevBtn.addEventListener('click', () => changePosition(1))
-// nextBtn.addEventListener('click', () => changePosition(-1))
-
-// function changePosition(change){
-//     const currentElement = Number(document.querySelector('.slider_body--show').dataset.id)
-        
-//     value = currentElement
-//     value += change
-//     if (value === 0 || value == sliders.length + 1){
-//         value = value === 0 ? sliders.length : 1
-//         }
-//         sliders[currentElement-1].classList.toggle('slider_body--show')
-//         sliders[value-1].classList.toggle('slider_body--show')
-//     }
+nextBtn.addEventListener('click',  () => changeImg(1))
+prevBtn.addEventListener('click',  () => changeImg(-1))
