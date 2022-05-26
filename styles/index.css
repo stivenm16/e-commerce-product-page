@@ -468,10 +468,17 @@ h3 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color: hsl(219, 9%, 45%);
+    
     
 }
 
-
+.cart-description {
+    font-weight: 300;
+}
+.cart-quantity {
+    font-weight: 300;
+}
 .cart-img {
     height: 36px;
     width: 36px;
@@ -494,6 +501,7 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    font-weight: 700;
     height: 48px;
     color: #fff;
     cursor: pointer;
