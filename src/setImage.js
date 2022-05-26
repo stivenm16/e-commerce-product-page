@@ -30,6 +30,7 @@ function unSelectedSmall() {
 
 function changeId(i) {
     idClicked = this.id
+    console.log(idClicked)
     unSelectedSmall()
     selectSmallOne()
     setImage()

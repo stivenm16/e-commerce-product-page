@@ -393,3 +393,68 @@ h3 {
 #close-btn.active:hover {
     color: hsl(26, 100%, 55%);
 }
+
+
+
+
+
+
+
+
+
+
+
+/* .small-images {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-items: flex-start;
+} */
+
+.card-small-image-Modal {
+    cursor: pointer;
+    border: 3px transparent  hsl(26, 100%, 55%);
+    margin: .85rem;
+    margin-right: .55rem;
+    padding: 0;
+    border-radius: 12px;
+}
+
+.card-small-image-Modal:hover {
+    transition: 0.15s ease-in-out;
+    border: 3px solid  hsl(26, 100%, 55%);
+    padding: 0;
+    border-radius: 16px;
+    height: 70px;
+    width: 73px;
+}
+
+.card-small-image-Modal img {
+    height: 70px;
+    width: 73px;
+    border-radius: 12px;
+    margin: 0;
+    padding: 0;
+}
+.card-small-image-Modal-selected{
+    transition: 0.15s ease-in-out;
+    border: 3px solid  hsl(26, 100%, 55%);
+    padding: 0;
+    border-radius: 16px;
+    height: 70px;
+    width: 73px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+/* .small-selected {
+    opacity: .2;
+} */
+.card-small-image-Modal img:hover {
+    
+    border: 3px solid  hsl(26, 100%, 55%);
+    opacity: .2;
+    height: 67px;
+    width: 70px;
+    object-fit: cover;
+    overflow: hidden;
+}

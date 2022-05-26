@@ -1,12 +1,17 @@
 import { containerSmall, largeImg, idClicked, smallSelected } from "./setImage.js";
+const containerSmallModal = [...document.querySelectorAll('.card-small-image-Modal')]
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
 const closeBtn = document.getElementById('close-btn')
 const prevBtn = document.getElementById('prev')
 const nextBtn = document.getElementById('next')
-const containerSmallModal = containerSmall.slice(4)
+const small1Modal = document.getElementById('5')
+const small2Modal = document.getElementById('6')
+const small3Modal = document.getElementById('7')
+const small4Modal = document.getElementById('8')
 const largeImgModal = document.getElementsByClassName('large-One-Modal')
-let nextId = idClicked
+let idClickedModal = idClicked
+let nextId = idClickedModal
 
 
 function setImgModal() {
@@ -24,46 +29,48 @@ export function closeMainModal() {
     closeBtn.classList.remove('active')
 }
 
-largeImg.addEventListener('click', openMainModal)
-closeBtn.addEventListener('click',closeMainModal)
 function changeImg(change) {
     
     nextId += change 
-    
-    
+    console.log(containerSmallModal)
     if (nextId === 0|| nextId == containerSmallModal.length + 1){
         nextId = nextId === 0 ? containerSmallModal.length : 1
     }
     largeImgModal[0].src = `./images/image-product-${nextId}.jpg`
     
 }
-// function changeIdModal(i) {
-//     idClicked = this.id
-//     selectSmallOneModal()
-//     unSelectedSmallModal()
-//     setImgModal()
-// }
+function changeIdModal(i) {
+    idClickedModal = this.id - 4
+    // console.log(idClickedModal)
+    unSelectedSmallModal()
+    selectSmallOneModal()
+    largeImgModal[0].src = `./images/image-product-${idClickedModal}.jpg`
+    // setImgModal()
+}
 
-// function selectSmallOneModal() {
-//     console.log('prueba')
-//     containerSmallModal[idClicked - 1].classList.toggle('card-small-image-selected')
-//     smallSelected[idClicked - 1].classList.toggle('small-selected')
+function selectSmallOneModal() {
+    // console.log(containerSmallModal)
+    containerSmallModal[idClickedModal - 1].classList.toggle('card-small-image-Modal-selected')
+    // smallSelected[idClickedModal - 1].classList.toggle('small-selected')
     
-// }
+}
 
-// function unSelectedSmallModal() {
-//     for (let i = 0; i < containerSmallModal.length; i++) {
-//         if (containerSmallModal[i].classList.contains('card-small-image-selected')){
-//             containerSmallModal[i].classList.toggle('card-small-image-selected')
-//             smallSelected[i].classList.toggle('small-selected')
-//         }
-//     }
-// }
+function unSelectedSmallModal() {
+    for (let i = 0; i < containerSmallModal.length; i++) {
+        if (containerSmallModal[i].classList.contains('card-small-image-Modal-selected')){
+            containerSmallModal[i].classList.toggle('card-small-image-Modal-selected')
+            // smallSelected[i].classList.toggle('small-selected')
+        }
+    }
+}
 
 
+largeImg.addEventListener('click', openMainModal)
+closeBtn.addEventListener('click',closeMainModal)
 nextBtn.addEventListener('click',  () => changeImg(1))
 prevBtn.addEventListener('click',  () => changeImg(-1))
-// small1.addEventListener('click', changeIdModal)
-// small2.addEventListener('click', changeIdModal)
-// small3.addEventListener('click', changeIdModal)
-// small4.addEventListener('click', changeIdModal)
+small1Modal.addEventListener('click', changeIdModal)
+small2Modal.addEventListener('click', changeIdModal)
+small3Modal.addEventListener('click', changeIdModal)
+small4Modal.addEventListener('click', changeIdModal)
+
