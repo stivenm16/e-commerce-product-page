@@ -1,4 +1,4 @@
-import { containerSmall, largeImg, idClicked, smallSelected } from "./setImage.js";
+import { containerSmall, largeImg, idClicked, smallSelected, changeId } from "./setImage.js";
 const containerSmallModal = [...document.querySelectorAll('.card-small-image-Modal')]
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
@@ -30,7 +30,6 @@ export function closeMainModal() {
 }
 
 function changeImg(change) {
-    
     nextId += change 
     console.log(containerSmallModal)
     if (nextId === 0|| nextId == containerSmallModal.length + 1){
@@ -43,14 +42,15 @@ function changeIdModal(i) {
     idClickedModal = this.id - 4
     // console.log(idClickedModal)
     unSelectedSmallModal()
-    selectSmallOneModal()
+    selectSmallOneModal(i)
     largeImgModal[0].src = `./images/image-product-${idClickedModal}.jpg`
     // setImgModal()
 }
 
-function selectSmallOneModal() {
+function selectSmallOneModal(i) {
     // console.log(containerSmallModal)
     containerSmallModal[idClickedModal - 1].classList.toggle('card-small-image-Modal-selected')
+
     // smallSelected[idClickedModal - 1].classList.toggle('small-selected')
     
 }
