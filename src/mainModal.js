@@ -13,7 +13,6 @@ const largeImgModal = document.getElementsByClassName('large-One-Modal')
 let idClickedModal = idClicked
 let nextId = idClickedModal
 
-
 function setImgModal() {
     largeImgModal[0].src = `./images/image-product-${idClicked}.jpg`
 }
@@ -46,6 +45,8 @@ function changeIdModal(i) {
     largeImgModal[0].src = `./images/image-product-${idClickedModal}.jpg`
     // setImgModal()
 }
+
+
 
 function selectSmallOneModal(i) {
     // console.log(containerSmallModal)

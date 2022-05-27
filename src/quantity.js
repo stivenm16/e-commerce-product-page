@@ -1,30 +1,44 @@
 const deleteItem = document.querySelector('.cart-delete')
-let quantityCart = document.querySelector('.cart-quantity')
-let total = document.querySelector('.cart-total')
+const cartDescription = document.querySelector('.cart-description-container')
+export let quantityCart = document.querySelector('.cart-quantity')
+export let total = document.querySelector('.cart-total')
 const btnAdd = document.querySelector('.btn-add')
 const btnRmv = document.querySelector('.btn-rmv')
-let quantity = document.querySelector('.quantity')
+export let quantity = document.querySelector('.quantity')
 
 export let price = '125.00'
 export let counter = 0
 quantityCart.textContent = `$ ${price} x ${counter}`
+export let totalPrice = parseInt(price) * counter
+
 
 export function addItem() {
     counter++
-    let totalPrice = parseInt(price) * counter
+    totalPrice = parseInt(price) * counter
     quantity.textContent = counter
     quantityCart.textContent = `$ ${price} x ${counter}`
     total.textContent = ` $ ${totalPrice}`
-
+    
+}
+export function emptyCart() {
+    if (counter <= 0) {
+        quantityCart.textContent = ''
+        total.textContent = 'Your cart is empty.'
+    }
 }
 export function rmvItem() {
+    
+
     if (counter <= 0) {
-        return
+        emptyCart()
     } else {
         counter--
-        let totalPrice = parseInt(price) * counter
+        totalPrice = parseInt(price) * counter
         quantityCart.textContent = `$ ${price} x ${counter}`
         total.textContent = ` $ ${totalPrice}`
+        if (counter == 0) {
+            emptyCart()
+        }
     }
     quantity.textContent = counter
 }

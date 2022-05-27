@@ -471,6 +471,9 @@ h3 {
     color: hsl(219, 9%, 45%);    
 }
 
+.cart-resume-container.empty {
+    font-weight: 700;
+}
 .cart-description {
     font-weight: 300;
 }
