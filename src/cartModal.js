@@ -1,11 +1,20 @@
+import { counter } from "./quantity.js"
+
 const addCartBtn = document.getElementById('add-cart')
 const cartModal = document.getElementById('cart-modal')
 let quantity = document.querySelector('.cart-quantity')
-import { counter } from "./quantity.js"
+let total = document.querySelector('.cart-total')
+const cartHeader =document.querySelector('#cart-header')
 
-quantity.textContent = `$125.00 x ${counter}`
-export function prueba() {
+export let price = '125.00'
+
+export function openCartModal() {
     cartModal.classList.toggle('active')
+    let totalPrice = parseInt(price) * counter
+    quantity.textContent = `$ ${price} x ${counter}`
+    total.textContent = ` $ ${totalPrice}`
 }
 
-addCartBtn.addEventListener('click', prueba)
+
+addCartBtn.addEventListener('click', openCartModal)
+cartHeader.addEventListener('click', openCartModal)

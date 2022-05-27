@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
-    /* background-color: hsl(0, 0%, 100%); */
 }
 
 a {
@@ -260,7 +259,9 @@ h3 {
     margin-left: 1rem;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 10px 18px #cccbcb
+    box-shadow: 5px 10px 18px #cccbcb;
+    cursor: pointer;
+    
 }
 
 .add-cart img, h6 {
@@ -394,12 +395,6 @@ h3 {
     color: hsl(26, 100%, 55%);
 }
 
-/* .small-images {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-items: flex-start;
-} */
-
 .card-small-image-Modal {
     cursor: pointer;
     border: 3px transparent  hsl(26, 100%, 55%);
@@ -493,6 +488,12 @@ h3 {
     margin-left: 13px;
 }
 
+.cart-total {
+    margin-left: .5rem;
+    color: rgba(0, 0, 0, .75);
+    font-size: 14px;
+    font-weight: 700;
+}
 .cart-resume-final{
     display: flex;
 }
