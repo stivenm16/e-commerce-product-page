@@ -448,9 +448,8 @@ h3 {
     object-fit: cover;
     overflow: hidden;
 }
-.cart-modal {
-    position: absolute;
-    /* border: none */
+.cart-modal.active {
+    position: fixed;
     padding: 1.5rem;
     width: 22%;
     left: 70%;
@@ -458,7 +457,13 @@ h3 {
     background-color: hsl(0, 0%, 100%);
     box-shadow: 1px 49px 83px -36px rgba(0,0,0,0.75);
     border-radius: 12px;padding-top: 1rem;
-    
+    opacity: 1;
+    overflow: hidden;
+}
+
+.cart-modal {
+    opacity: 0;
+    position: fixed;
 }
 .cart-title {
     margin: 1rem;
@@ -468,9 +473,7 @@ h3 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: hsl(219, 9%, 45%);
-    
-    
+    color: hsl(219, 9%, 45%);    
 }
 
 .cart-description {

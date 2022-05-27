@@ -2,7 +2,7 @@ const btnAdd = document.querySelector('.btn-add')
 const btnRmv = document.querySelector('.btn-rmv')
 let quantity = document.querySelector('.quantity')
 
-let counter = 0
+export let counter = 0
 export function addItem() {
     counter++
     quantity.textContent = counter
