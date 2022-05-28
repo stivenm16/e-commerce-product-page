@@ -514,3 +514,7 @@ h3 {
     cursor: pointer;
     margin-top: 12px;
 }
+
+.cart-img.active, .cart-delete.active, .cart-checkout.active, .cart-description.active {
+    opacity: 1;
+}

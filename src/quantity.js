@@ -11,6 +11,11 @@ export let counter = 0
 quantityCart.textContent = `$ ${price} x ${counter}`
 export let totalPrice = parseInt(price) * counter
 
+export function updateStateEmpty() {
+    if (quantity == 0) {
+        cartDescription.classList.add('active')
+    }
+}
 
 export function addItem() {
     counter++
